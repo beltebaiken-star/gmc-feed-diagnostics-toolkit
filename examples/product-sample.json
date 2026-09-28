@@ -1,0 +1,10 @@
+{
+  "id": "demo-001",
+  "title": "Demo Product",
+  "price": "49.00 USD",
+  "availability": "in_stock",
+  "brand": "Demo Brand",
+  "gtin": "0000000000000",
+  "link": "https://example.com/products/demo",
+  "image_link": "https://example.com/demo.jpg"
+}
