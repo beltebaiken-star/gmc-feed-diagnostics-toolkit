@@ -14,6 +14,12 @@ GMC issues are frequently misdiagnosed because feed-field errors, landing-page m
 
 This project separates structural product-data validation from policy/remediation workflow and includes a runnable synthetic feed diagnostic.
 
+## Visual proof
+
+The visual below summarizes the **client problem, architecture, validation logic, and delivery outcomes** for this sanitized technical case study.
+
+![Google Merchant Center Feed Diagnostics Toolkit visual proof](./screenshots/visual-proof-overview.png)
+
 ## Architecture
 
 ```mermaid
