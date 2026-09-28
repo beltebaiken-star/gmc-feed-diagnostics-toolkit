@@ -1,0 +1,8 @@
+{
+  "name": "gmc-feed-diagnostics-toolkit-demo",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node demo/diagnose-feed.mjs"
+  }
+}
