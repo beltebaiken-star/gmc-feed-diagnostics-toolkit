@@ -1,62 +1,79 @@
-# Google Merchant Center Feed Diagnostics
+# Google Merchant Center Feed Diagnostics Toolkit
 
-> Upwork portfolio demo / sanitized technical case study.
+> **Structured diagnostics for Shopify product feeds, landing-page consistency and GMC remediation.**
+
+[![Portfolio](https://img.shields.io/badge/Portfolio-Sanitized%20Demo-2ea44f)](https://github.com/beltebaiken-star/gmc-feed-diagnostics-toolkit)
+[![Run](https://img.shields.io/badge/Quick%20Check-npm%20test-blue)](https://github.com/beltebaiken-star/gmc-feed-diagnostics-toolkit)
+[![Upwork](https://img.shields.io/badge/Available%20on-Upwork-14a800)](https://www.upwork.com/freelancers/baikenbelte)
 
 ## Client problem
 
-A diagnostic toolkit and workflow for identifying feed errors, inconsistent attributes, disapprovals, and policy-risk patterns before resubmission.
+GMC issues are frequently misdiagnosed because feed-field errors, landing-page mismatches and account-level policy problems are mixed together.
 
-## What this repository demonstrates
+## What this project proves
 
-- Feed field validation
-- Price/availability consistency checks
-- GTIN/MPN/brand diagnostics
-- Landing-page consistency checklist
-- Issue-to-fix remediation workflow
-
-## Tech stack
-
-Google Merchant Center, product feeds, Shopify, policy diagnostics
+This project separates structural product-data validation from policy/remediation workflow and includes a runnable synthetic feed diagnostic.
 
 ## Architecture
 
-This repository is intentionally structured as a public portfolio implementation rather than a copy of private client code. Production credentials, customer data, private URLs and proprietary business logic are excluded.
-
-```text
-Input / Store / Platform Event
-        ↓
-Validation & Normalization
-        ↓
-Business / Tracking / Integration Logic
-        ↓
-External API or Storefront
-        ↓
-QA, Logs, Reconciliation
+```mermaid
+flowchart LR
+  A[Shopify product data] --> B[Normalization]
+  B --> C[Feed field validation]
+  C --> D[Landing-page consistency]
+  D --> E[GMC diagnostics]
+  E --> F[Issue classification]
+  F --> G[Remediation plan]
+  G --> H[Resubmit / monitor]
 ```
 
-## What an Upwork client can verify here
+## Quick start
 
-- Clear separation between configuration, business logic and external API calls
-- Error handling and production-readiness thinking
-- Practical ecommerce use cases rather than toy examples
-- Documentation that explains both implementation and validation
-- Security-conscious handling of credentials and customer data
+```bash
+git clone https://github.com/beltebaiken-star/gmc-feed-diagnostics-toolkit.git
+cd gmc-feed-diagnostics-toolkit
+npm test
+```
 
-## Suggested demo contents
+**What the demo checks:** Checks required product fields, price format, availability values and HTTPS landing/image URLs.
 
-- `src/` — sanitized implementation examples
-- `examples/` — sample payloads using synthetic data
-- `tests/` — validation / QA examples
-- `docs/architecture.md` — architecture and flow
-- `docs/qa-checklist.md` — production verification steps
-- `screenshots/` — portfolio diagrams and UI/results images
+No external credentials or paid services are required for this demo.
 
-## Source portfolio reference
+## What I would deliver on a client project
 
-Internal source project: **17 - Google Merchant Center Feed Diagnostics and Policy Fixes**
+- Feed and product-data audit
+- Price/availability consistency checks
+- GTIN / brand / MPN review
+- Landing-page consistency review
+- Issue classification by data vs policy layer
+- Remediation checklist
+- Post-fix verification plan
 
-Only reusable patterns and sanitized demo material should be published publicly.
+## Production QA principles
 
-## Hiring fit
+- Diagnose the failing layer before changing production code.
+- Keep identifiers, values and platform mappings consistent end-to-end.
+- Test both success and failure paths.
+- Check for duplicates, missing events/data, and stale configuration.
+- Reconcile platform output against Shopify/store source-of-truth data.
+- Document the fix and leave a repeatable verification checklist.
 
-Good match for Upwork projects involving **Google Merchant Center Feed Diagnostics**, Shopify troubleshooting, ecommerce integrations, tracking reliability, API automation, or production-readiness reviews.
+## Repository map
+
+```text
+demo/                 runnable synthetic validation
+examples/             safe sample payloads / implementation snippets
+docs/architecture.md  technical architecture notes
+docs/qa-checklist.md  production verification checklist
+README.md              client-facing case study
+```
+
+## Security & portfolio note
+
+This repository is a **sanitized technical portfolio demo**. It intentionally excludes customer data, production credentials, private URLs, access tokens and proprietary client code.
+
+## Hire / contact
+
+I take on focused Shopify, ecommerce tracking, analytics, GMC and integration projects.
+
+**Upwork:** https://www.upwork.com/freelancers/baikenbelte
